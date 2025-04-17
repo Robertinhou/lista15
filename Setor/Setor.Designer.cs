@@ -58,7 +58,7 @@
             // 
             lblNomeSetor.AutoSize = true;
             lblNomeSetor.Font = new Font("Segoe UI", 12F);
-            lblNomeSetor.Location = new Point(34, 302);
+            lblNomeSetor.Location = new Point(33, 231);
             lblNomeSetor.Name = "lblNomeSetor";
             lblNomeSetor.Size = new Size(271, 32);
             lblNomeSetor.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             lblid.AutoSize = true;
             lblid.Font = new Font("Segoe UI", 12F);
-            lblid.Location = new Point(36, 171);
+            lblid.Location = new Point(37, 309);
             lblid.Name = "lblid";
             lblid.Size = new Size(42, 32);
             lblid.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             // txtNomeSetor
             // 
-            txtNomeSetor.Location = new Point(37, 342);
+            txtNomeSetor.Location = new Point(36, 271);
             txtNomeSetor.Name = "txtNomeSetor";
             txtNomeSetor.Size = new Size(552, 35);
             txtNomeSetor.TabIndex = 3;
@@ -89,6 +89,7 @@
             btnGravar.TabIndex = 4;
             btnGravar.Text = "Gravar";
             btnGravar.UseVisualStyleBackColor = true;
+            btnGravar.Click += btnGravar_Click;
             // 
             // lblNome
             // 
@@ -102,7 +103,7 @@
             // 
             // txtID
             // 
-            txtID.Location = new Point(134, 171);
+            txtID.Location = new Point(37, 342);
             txtID.Name = "txtID";
             txtID.Size = new Size(165, 35);
             txtID.TabIndex = 6;
@@ -122,15 +123,17 @@
             btnEditar.TabIndex = 8;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(738, 235);
+            btnExcluir.Location = new Point(738, 335);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(132, 49);
             btnExcluir.TabIndex = 9;
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // btnListarTodos
             // 
@@ -140,15 +143,17 @@
             btnListarTodos.TabIndex = 10;
             btnListarTodos.Text = "Listar todos";
             btnListarTodos.UseVisualStyleBackColor = true;
+            btnListarTodos.Click += btnListarTodos_Click;
             // 
             // btnListarPnome
             // 
-            btnListarPnome.Location = new Point(738, 328);
+            btnListarPnome.Location = new Point(456, 335);
             btnListarPnome.Name = "btnListarPnome";
             btnListarPnome.Size = new Size(132, 49);
             btnListarPnome.TabIndex = 11;
             btnListarPnome.Text = "Procurar";
             btnListarPnome.UseVisualStyleBackColor = true;
+            btnListarPnome.Click += btnListarPnome_Click;
             // 
             // label1
             // 

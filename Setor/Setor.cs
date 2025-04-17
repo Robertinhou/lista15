@@ -18,5 +18,46 @@ namespace Setor
         {
 
         }
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!txtNome.Text.Equals(""))
+                {
+                    MetodoSetor metodos = new MetodoSetor();
+                    metodos.Nome = txtNome.Text;
+
+                    if (metodos.InserirSetor())
+                    {
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListarPnome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListarTodos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -89,11 +89,51 @@ namespace Setor
 
             }
         }
-       public bool ExcluirSetor() { }
-        public bool ListarTodosSetores(DataGridView DataGrind) {
+        public bool ExcluirSetor()
+        {
             try
             {
-                using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar()) {
+                DialogResult result = MessageBox.Show("Deseja apagar este setor?", "Exlusão de setor", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
+                    {
+                        string sqlDelete = "DELETE INTO setor (nome) VALUES (@nome)";
+
+                        MySqlCommand comandoSQL = new MySqlCommand(sqlDelete, conexaoBanco);
+
+                        comandoSQL.Parameters.AddWithValue("@nome", Nome);
+
+                        int resultado = comandoSQL.ExecuteNonQuery();
+
+                        if (resultado > 0)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                } else
+                {
+                    MessageBox.Show("Cancelado");
+                    return false;
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao cancelar -> {ex.Message}");
+                return false;
+            }
+            
+        }
+        public bool ListarTodosSetores(DataGridView DataGrind)
+        {
+            try
+            {
+                using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
+                {
 
                     string sqlSelect = "SELECT * FROM Setor";
 
@@ -124,10 +164,10 @@ namespace Setor
             {
 
                 MessageBox.Show($"Erro ao listar todos os objetos -> {ex.Message}");
-
+                return false;
             }
         }
 
-        public bool ListarSetorNome() { } 
+       // public bool ListarSetorNome() { }
     }
 }
