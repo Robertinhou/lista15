@@ -9,7 +9,7 @@ namespace Setor
 {
     public class ConexaoDB
     {
-        private string conexaoBanco = "Server=localhost; Database=lista15; Uid=root; pwd='';";
+        private string conexaoBanco = "Server=localhost; Database=setor; Uid=root; pwd=''";
 
         public MySqlConnection Conectar()
         {

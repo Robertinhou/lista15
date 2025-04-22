@@ -41,6 +41,8 @@
             btnListarTodos = new Button();
             btnListarPnome = new Button();
             label1 = new Label();
+            btnCancelar = new Button();
+            lblTitle = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGrind).BeginInit();
             SuspendLayout();
             // 
@@ -53,14 +55,15 @@
             dataGrind.Size = new Size(833, 254);
             dataGrind.TabIndex = 0;
             dataGrind.CellContentClick += dataGrind_CellContentClick;
+            dataGrind.CellDoubleClick += DataGrind_CellDoubleClick;
             // 
             // lblNomeSetor
             // 
             lblNomeSetor.AutoSize = true;
             lblNomeSetor.Font = new Font("Segoe UI", 12F);
-            lblNomeSetor.Location = new Point(33, 231);
+            lblNomeSetor.Location = new Point(30, 221);
             lblNomeSetor.Name = "lblNomeSetor";
-            lblNomeSetor.Size = new Size(271, 32);
+            lblNomeSetor.Size = new Size(174, 21);
             lblNomeSetor.TabIndex = 1;
             lblNomeSetor.Text = "Digite o nome do Setor:";
             // 
@@ -68,17 +71,17 @@
             // 
             lblid.AutoSize = true;
             lblid.Font = new Font("Segoe UI", 12F);
-            lblid.Location = new Point(37, 309);
+            lblid.Location = new Point(34, 299);
             lblid.Name = "lblid";
-            lblid.Size = new Size(42, 32);
+            lblid.Size = new Size(28, 21);
             lblid.TabIndex = 2;
             lblid.Text = "ID:";
             // 
             // txtNomeSetor
             // 
-            txtNomeSetor.Location = new Point(36, 271);
+            txtNomeSetor.Location = new Point(33, 261);
             txtNomeSetor.Name = "txtNomeSetor";
-            txtNomeSetor.Size = new Size(552, 35);
+            txtNomeSetor.Size = new Size(552, 26);
             txtNomeSetor.TabIndex = 3;
             // 
             // btnGravar
@@ -97,22 +100,22 @@
             lblNome.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblNome.Location = new Point(36, 90);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(85, 32);
+            lblNome.Size = new Size(56, 21);
             lblNome.TabIndex = 5;
             lblNome.Text = "Nome:";
             // 
             // txtID
             // 
-            txtID.Location = new Point(37, 342);
+            txtID.Location = new Point(34, 332);
             txtID.Name = "txtID";
-            txtID.Size = new Size(165, 35);
+            txtID.Size = new Size(165, 26);
             txtID.TabIndex = 6;
             // 
             // txtNome
             // 
             txtNome.Location = new Point(134, 90);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(542, 35);
+            txtNome.Size = new Size(542, 26);
             txtNome.TabIndex = 7;
             // 
             // btnEditar
@@ -127,7 +130,7 @@
             // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(738, 335);
+            btnExcluir.Location = new Point(738, 309);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(132, 49);
             btnExcluir.TabIndex = 9;
@@ -147,7 +150,7 @@
             // 
             // btnListarPnome
             // 
-            btnListarPnome.Location = new Point(456, 335);
+            btnListarPnome.Location = new Point(738, 231);
             btnListarPnome.Name = "btnListarPnome";
             btnListarPnome.Size = new Size(132, 49);
             btnListarPnome.TabIndex = 11;
@@ -161,15 +164,37 @@
             label1.Font = new Font("Segoe UI", 12F);
             label1.Location = new Point(37, 9);
             label1.Name = "label1";
-            label1.Size = new Size(225, 32);
+            label1.Size = new Size(147, 21);
             label1.TabIndex = 12;
             label1.Text = "Criação e Alteração ";
             // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(240, 321);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(132, 49);
+            btnCancelar.TabIndex = 13;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Arial Black", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblTitle.Location = new Point(240, 168);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(122, 23);
+            lblTitle.TabIndex = 14;
+            lblTitle.Text = "Editar dados";
+            // 
             // Setor
             // 
-            AutoScaleDimensions = new SizeF(11F, 29F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(918, 731);
+            Controls.Add(lblTitle);
+            Controls.Add(btnCancelar);
             Controls.Add(label1);
             Controls.Add(btnListarPnome);
             Controls.Add(btnListarTodos);
@@ -207,5 +232,7 @@
         private Button btnListarTodos;
         private Button btnListarPnome;
         private Label label1;
+        private Button btnCancelar;
+        private Label lblTitle;
     }
 }

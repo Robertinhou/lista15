@@ -32,7 +32,7 @@ namespace Setor
             {
                 using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
                 {
-                    string sqlInsert = "INSERT INTO setor (nome) VALUES (@nome)";
+                    string sqlInsert = "INSERT INTO setores (nome) VALUES (@nome)";
 
                     MySqlCommand comandoSQL = new MySqlCommand(sqlInsert, conexaoBanco);
 
@@ -64,7 +64,7 @@ namespace Setor
             {
                 using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
                 {
-                    string sqlUpdate = "INSERT INTO setor (nome) VALUES (@nome)";
+                    string sqlUpdate = "INSERT INTO setores (nome) VALUES (@nome)";
 
                     MySqlCommand comandoSQL = new MySqlCommand(sqlUpdate, conexaoBanco);
 
@@ -99,7 +99,7 @@ namespace Setor
                 {
                     using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
                     {
-                        string sqlDelete = "DELETE INTO setor (nome) VALUES (@nome)";
+                        string sqlDelete = "DELETE INTO setores (nome) VALUES (@nome)";
 
                         MySqlCommand comandoSQL = new MySqlCommand(sqlDelete, conexaoBanco);
 
@@ -135,7 +135,7 @@ namespace Setor
                 using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
                 {
 
-                    string sqlSelect = "SELECT * FROM Setor";
+                    string sqlSelect = "SELECT * FROM setores";
 
                     MySqlDataAdapter dataAdapter = new MySqlDataAdapter(sqlSelect, conexaoBanco);
 

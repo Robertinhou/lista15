@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Aluno_Manha\\source\\repos\\Setor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|c:\\users\\aluno_manha\\source\\repos\\setor\\setor\\metodosetor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|solutionrelative:setor\\metodosetor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|c:\\users\\aluno_manha\\source\\repos\\setor\\setor\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|solutionrelative:setor\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|C:\\Users\\Aluno_Manha\\source\\repos\\Setor\\setor\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|c:\\users\\aluno_manha\\source\\repos\\setor\\setor\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|solutionrelative:setor\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|c:\\users\\aluno_manha\\source\\repos\\setor\\setor\\conexaodb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|solutionrelative:setor\\conexaodb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|c:\\users\\aluno_manha\\source\\repos\\setor\\setor\\metodosetor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A83414CE-6078-4D66-9F9F-8506BB0FCF28}|Setor\\Setor.csproj|solutionrelative:setor\\metodosetor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,59 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MetodoSetor.cs",
               "DocumentMoniker": "C:\\Users\\Aluno_Manha\\source\\repos\\Setor\\Setor\\MetodoSetor.cs",
               "RelativeDocumentMoniker": "Setor\\MetodoSetor.cs",
               "ToolTip": "C:\\Users\\Aluno_Manha\\source\\repos\\Setor\\Setor\\MetodoSetor.cs",
               "RelativeToolTip": "Setor\\MetodoSetor.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAiwDMAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAcwGQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T12:14:36.303Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Setor.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno_Manha\\source\\repos\\Setor\\Setor\\Setor.cs",
+              "RelativeDocumentMoniker": "Setor\\Setor.cs",
+              "ToolTip": "C:\\Users\\Aluno_Manha\\source\\repos\\Setor\\Setor\\Setor.cs",
+              "RelativeToolTip": "Setor\\Setor.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAA7wFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T13:38:03.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Setor.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\Aluno_Manha\\source\\repos\\Setor\\Setor\\Setor.cs",
               "RelativeDocumentMoniker": "Setor\\Setor.cs",
               "ToolTip": "C:\\Users\\Aluno_Manha\\source\\repos\\Setor\\Setor\\Setor.cs [Projeto]",
               "RelativeToolTip": "Setor\\Setor.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:27:12.81Z",
+              "WhenOpened": "2025-04-22T13:11:57.696Z",
               "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Setor.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno_Manha\\source\\repos\\Setor\\Setor\\Setor.cs",
-              "RelativeDocumentMoniker": "Setor\\Setor.cs",
-              "ToolTip": "C:\\Users\\Aluno_Manha\\source\\repos\\Setor\\Setor\\Setor.cs",
-              "RelativeToolTip": "Setor\\Setor.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA4wCgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T11:53:22.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ConexaoDB.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno_Manha\\source\\repos\\Setor\\Setor\\ConexaoDB.cs",
-              "RelativeDocumentMoniker": "Setor\\ConexaoDB.cs",
-              "ToolTip": "C:\\Users\\Aluno_Manha\\source\\repos\\Setor\\Setor\\ConexaoDB.cs",
-              "RelativeToolTip": "Setor\\ConexaoDB.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T11:36:28.088Z",
-              "EditorCaption": ""
             }
           ]
         }
