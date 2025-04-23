@@ -40,9 +40,9 @@
             btnExcluir = new Button();
             btnListarTodos = new Button();
             btnListarPnome = new Button();
-            label1 = new Label();
             btnCancelar = new Button();
             lblTitle = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGrind).BeginInit();
             SuspendLayout();
             // 
@@ -81,7 +81,7 @@
             // 
             txtNomeSetor.Location = new Point(33, 261);
             txtNomeSetor.Name = "txtNomeSetor";
-            txtNomeSetor.Size = new Size(552, 26);
+            txtNomeSetor.Size = new Size(442, 26);
             txtNomeSetor.TabIndex = 3;
             // 
             // btnGravar
@@ -130,7 +130,7 @@
             // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(738, 309);
+            btnExcluir.Location = new Point(738, 221);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(132, 49);
             btnExcluir.TabIndex = 9;
@@ -142,7 +142,7 @@
             // 
             btnListarTodos.Location = new Point(37, 660);
             btnListarTodos.Name = "btnListarTodos";
-            btnListarTodos.Size = new Size(833, 49);
+            btnListarTodos.Size = new Size(659, 49);
             btnListarTodos.TabIndex = 10;
             btnListarTodos.Text = "Listar todos";
             btnListarTodos.UseVisualStyleBackColor = true;
@@ -150,7 +150,7 @@
             // 
             // btnListarPnome
             // 
-            btnListarPnome.Location = new Point(738, 231);
+            btnListarPnome.Location = new Point(493, 250);
             btnListarPnome.Name = "btnListarPnome";
             btnListarPnome.Size = new Size(132, 49);
             btnListarPnome.TabIndex = 11;
@@ -158,19 +158,9 @@
             btnListarPnome.UseVisualStyleBackColor = true;
             btnListarPnome.Click += btnListarPnome_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(37, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(147, 21);
-            label1.TabIndex = 12;
-            label1.Text = "Criação e Alteração ";
-            // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(240, 321);
+            btnCancelar.Location = new Point(723, 660);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(132, 49);
             btnCancelar.TabIndex = 13;
@@ -182,20 +172,30 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Arial Black", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(240, 168);
+            lblTitle.Location = new Point(30, 180);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(122, 23);
+            lblTitle.Size = new Size(114, 23);
             lblTitle.TabIndex = 14;
-            lblTitle.Text = "Editar dados";
+            lblTitle.Text = "Editar setor";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial Black", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.Location = new Point(30, 42);
+            label2.Name = "label2";
+            label2.Size = new Size(118, 23);
+            label2.TabIndex = 15;
+            label2.Text = "Inserir setor";
             // 
             // Setor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(918, 731);
+            Controls.Add(label2);
             Controls.Add(lblTitle);
             Controls.Add(btnCancelar);
-            Controls.Add(label1);
             Controls.Add(btnListarPnome);
             Controls.Add(btnListarTodos);
             Controls.Add(btnExcluir);
@@ -231,8 +231,8 @@
         private Button btnExcluir;
         private Button btnListarTodos;
         private Button btnListarPnome;
-        private Label label1;
         private Button btnCancelar;
         private Label lblTitle;
+        private Label label2;
     }
 }

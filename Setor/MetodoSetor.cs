@@ -62,13 +62,15 @@ namespace Setor
         {
             try
             {
+
                 using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
                 {
-                    string sqlUpdate = "INSERT INTO setores (nome) VALUES (@nome)";
+                    string sqlUpdate = "UPDATE setores SET nome = @nome WHERE id=@id";
 
                     MySqlCommand comandoSQL = new MySqlCommand(sqlUpdate, conexaoBanco);
 
                     comandoSQL.Parameters.AddWithValue("@nome", Nome);
+                    comandoSQL.Parameters.AddWithValue("@id", Id);
 
                     int resultado = comandoSQL.ExecuteNonQuery();
 
@@ -88,6 +90,7 @@ namespace Setor
                 return false;
 
             }
+
         }
         public bool ExcluirSetor()
         {
@@ -151,13 +154,14 @@ namespace Setor
 
                     if (DataGrind.Rows.Count > 0)
                     {
+                        DataGrind.ClearSelection();
                         return true;
                     }
                     else
                     {
                         return false;
                     }
-                    DataGrind.ClearSelection();
+                    
                 }
             }
             catch (Exception ex)
@@ -168,6 +172,50 @@ namespace Setor
             }
         }
 
-       // public bool ListarSetorNome() { }
+        public bool BuscarPorNone(DataGridView DataGrind)
+        {
+            try
+            {
+                using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
+                {
+
+                    string sqlSelect = "SELECT * FROM setores ORDER BY nome WHERE nome LIKE @nome OR id=@id ";
+
+                    MySqlCommand comando = new MySqlCommand(sqlSelect, conexaoBanco);
+
+                    DataTable dataTable = new DataTable();
+
+                    comando.Parameters.AddWithValue("@nome", "%"+ Nome+"%");
+                    comando.Parameters.AddWithValue("@id", Id);
+
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(comando);
+
+                    dataAdapter.Fill(dataTable);
+
+                    DataGrind.AllowUserToAddRows = false;
+                    DataGrind.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                    DataGrind.DataSource = dataTable;
+                    DataGrind.AutoResizeColumns();
+
+                    if (DataGrind.Rows.Count > 0)
+                    {
+                        DataGrind.ClearSelection();
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show($"Erro ao listar todos os objetos -> {ex.Message}");
+                return false;
+            }
+        }
     }
 }

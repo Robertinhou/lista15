@@ -12,14 +12,15 @@ namespace Setor
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            btnEditar.Enabled = false;
+            btnExcluir.Enabled = false;
             btnCancelar.Visible = false;
 
         }
 
         private void dataGrind_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
 
         private void btnGravar_Click(object sender, EventArgs e)
@@ -52,7 +53,22 @@ namespace Setor
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            if (!txtNomeSetor.Text.Equals("") && !txtID.Text.Equals(""))
+            {
+                MetodoSetor setor = new MetodoSetor();
 
+                setor.Nome = txtNomeSetor.Text;
+
+                setor.Id = int.Parse(txtID.Text);
+
+                setor.EditarSetor();
+
+                setor.ListarTodosSetores(dataGrind);
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível editar. Preencha os campos corretamente!");
+            }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -62,6 +78,46 @@ namespace Setor
 
         private void btnListarPnome_Click(object sender, EventArgs e)
         {
+
+            
+
+            try
+            {
+
+
+                MetodoSetor setor = new MetodoSetor();
+
+                if (!string.IsNullOrEmpty(txtNomeSetor.Text))
+                {
+
+                    setor.Nome = txtNomeSetor.Text;
+                    setor.BuscarPorNone(dataGrind);
+
+                } else if (!string.IsNullOrEmpty(txtID.Text))
+                {
+                    setor.Id = int.Parse(txtID.Text);
+                    setor.BuscarPorNone(dataGrind);
+                }
+                else
+                {
+                    MessageBox.Show("Erro: Informe o nome ou id do setor");
+                }
+
+
+                    setor.BuscarPorNone(dataGrind);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Usuário não encontrado!");
+
+            }
+           
+
+           
+            
 
         }
 
@@ -77,14 +133,15 @@ namespace Setor
         private void DataGrind_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            dataGrind.BeginEdit(false);
+            btnExcluir.Enabled = true;
+            btnEditar.Enabled = true;
 
             txtID.Text = dataGrind.CurrentRow.Cells[0].Value.ToString();
             txtNomeSetor.Text = dataGrind.CurrentRow.Cells[1].Value.ToString();
 
             txtID.Enabled = false;
-            btnCancelar.Visible = true; 
-            
+            btnCancelar.Visible = true;
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -95,6 +152,9 @@ namespace Setor
 
             txtID.Enabled = true;
             btnCancelar.Visible = false;
+
+            btnEditar.Enabled = false;
+            btnExcluir.Enabled = false;
         }
     }
 }
