@@ -2,7 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing.Text;
+using System.IO.IsolatedStorage;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -179,35 +182,42 @@ namespace Setor
                 using (MySqlConnection conexaoBanco = new ConexaoDB().Conectar())
                 {
 
-                    string sqlSelect = "SELECT * FROM setores ORDER BY nome WHERE nome LIKE @nome OR id=@id ";
+                    string sqlSelectLike = "SELECT * FROM setores WHERE nome LIKE @nome ORDER BY nome ASC";
 
-                    MySqlCommand comando = new MySqlCommand(sqlSelect, conexaoBanco);
 
+
+                    if (String.IsNullOrEmpty(Nome))
+                    {
+
+                        sqlSelectLike = "SELECT * FROM setores WHERE id = @id ORDER BY nome ASC";
+
+                    }
+                    
+
+                    
+                    
+
+
+
+                    MySqlCommand comandoSQL = new MySqlCommand(sqlSelectLike, conexaoBanco);
+                    
+                    comandoSQL.Parameters.AddWithValue("@id", Id);
+                    comandoSQL.Parameters.AddWithValue("@nome", "%" + Nome + "%");
+
+                    // Usa o comando no DataAdapter corretamente
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(comandoSQL);
                     DataTable dataTable = new DataTable();
-
-                    comando.Parameters.AddWithValue("@nome", "%"+ Nome+"%");
-                    comando.Parameters.AddWithValue("@id", Id);
-
-                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(comando);
-
                     dataAdapter.Fill(dataTable);
 
+                    // Configura o DataGridView
                     DataGrind.AllowUserToAddRows = false;
                     DataGrind.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
                     DataGrind.DataSource = dataTable;
                     DataGrind.AutoResizeColumns();
+                    DataGrind.ClearSelection();
 
-                    if (DataGrind.Rows.Count > 0)
-                    {
-                        DataGrind.ClearSelection();
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-
+                    // Verifica se veio algo
+                    return dataTable.Rows.Count > 0;
                 }
             }
             catch (Exception ex)
